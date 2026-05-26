@@ -1,338 +1,404 @@
-# Chapter 2: Preparation
+# Section 2 Preparation work
 
-> This section primarily recommends two browser-based integrated development environments for environment configuration. Whether you're using a phone, tablet, or computer, you can log in and run code anytime. Although the experience on phones and tablets might not be ideal, they are still usable.
+> In terms of environment configuration, this section mainly recommends two browser-based integrated development environments. Whether it is a mobile phone, tablet or computer, you can log in and run the code at any time. Although the experience on mobile phones and tablets may not be good, it is better to use it.
 
-## 1. Deepseek API Configuration (You can also choose other LLM APIs)
+## 1. Large model API configuration
 
-### 1.1 API Application
+### 1.1 AIHubmix API application
 
-To use the large language model services provided by Deepseek, you first need an API Key. Here are the application steps:
+AIHubmix is ​​an American platform. The company is registered in Delaware, USA. It aggregates the world's mainstream AI models in one stop. The latest models are usually supported no more than 1 week after the day of release. Cloud vendors that are fully connected to related models (OpenAI is connected to Azure cloud, Gemini is connected to Google official, Claude is connected to AWS, and other open source and other models are connected to major well-known cloud vendors or inference companies). AIHubmix's servers are deployed in clusters on Google Cloud in the United States. At the same time, because they are fully connected to cloud vendors, the stability is very good. It has a multi-endpoint routing mechanism that can achieve a more stable effect than directly connecting to the official server.
 
-1.  **Visit Deepseek Open Platform**
-    Open your browser and visit [Deepseek Open Platform](https://platform.deepseek.com/).
+> The free models provided by AIHubmix are enough for us to complete the project.
 
-    ![Deepseek Platform Homepage](../images/1_2_1.webp)
+1. **Access AIHubmix Platform**
 
-2.  **Login or Register Account**
-    If you already have an account, please log in directly. If not, click the register button on the page and complete registration using your email or phone number.
+Open your browser and visit [AIHubmix](https://aihubmix.com/?aff=anNj).
 
-3.  **Create New API Key**
-    After successful login, find and click `API Keys` in the left navigation bar. On the API management page, click the `Create API key` button. Enter a name that doesn't duplicate other API keys and click create.
+    ![AIHubmix](./images/1.png)
 
-    ![Create New Key Button](../images/1_2_2.webp)
+2. **Log in or register an account**
 
-4.  **Save API Key**
-    The system will generate a new API key for you. Please **copy immediately** and save it in a secure place.
+If you already have an account, you can log in directly. If not, please click the registration button in the upper right corner of the page and use your email or mobile phone number to complete the registration.
 
-    > Note: For security reasons, this key will only be displayed in full once. You won't be able to see it again after closing the popup.
+3. **Model Screening**
 
-    ![Copy and Save Key](../images/1_2_3.webp)
+After the registration is completed, go to the [Model Page](https://aihubmix.com/models). Select `免费` for the tag, and you can see that the official provides a certain number of free models. Moreover, AIHubmix also provides many domestic and foreign model selections for embedding and reordering, which are commonly used in the RAG field.
 
-## 2. GitHub Codespaces Environment Configuration (Recommended)
+    ![model page](./images/2.png)
 
-> First, ensure you have a network environment that can smoothly access GitHub. If you cannot access it smoothly, please use Cloud Studio below.
+4. **Manage API Keys**
 
-GitHub Codespaces is a service provided by GitHub that allows developers to create, edit, and run code in the cloud. It provides a pre-configured development environment including code editor, terminal, debugging tools, etc., which can be used directly in the browser.
+Then enter the [Key Management Page] (https://console.aihubmix.com/token), as shown in the figure below. By default, there is already a key that can be copied and used directly. Of course, you can also click `创建 Key` to fill in the name and create a new one.
 
-### 2.1 Creating Codespaces
+    ![Key management](./images/3.png)
 
-1.  **Visit Project Address**
+### 1.2 DeepSeek API application
 
-    Open your browser and visit [all-in-rag](https://github.com/datawhalechina/all-in-rag)
+To use the large language model service provided by Deepseek, you first need an API Key. Here are the application steps:
 
-2.  **Create New Fork**
-    In the upper right corner of the project page, click the `Fork` button to create a new fork. Wait a moment for successful creation.
+1. **Access Deepseek Open Platform**
 
-    ![Create New Fork 1](../images/1_2_4.webp)
+Open the browser and visit [Deepseek Open Platform](https://platform.deepseek.com/).
 
-    ![Create New Fork 2](../images/1_2_5.webp)
+    ![Deepseek platform homepage](./images/1_2_1.webp)
 
-3.  **Create Codespaces**
-    In the upper right corner of the project page, click the `Code` button, then select the `Codespaces` tab. Click the `New codespace` button and wait for the new Codespaces environment to be created successfully.
+2. **Log in or register an account**
 
-    ![Create Codespaces](../images/1_2_6.webp)
+If you already have an account, please log in directly. If not, please click the registration button on the page and use your email or mobile phone number to complete the registration.
 
-4.  **Re-enter Codespaces**
-    After closing the webpage, find the newly created repository and click the content in the red box to re-enter the codespace environment.
+3. **Create new API key**
 
-    ![Re-enter Codespaces](../images/1_2_7.webp)
+After successfully logging in, find and click `API Keys` in the navigation bar on the left side of the page. On the API management page, click the `创建 API key` button. Enter a name that is not the same as other API keys and click Create.
 
-5.  **Quota Settings**
-    Find the codespace settings in GitHub's account settings. It's recommended to adjust the suspend time according to your situation (too long will waste quota, free accounts provide 120 hours of single-core quota).
+    ![Create new key button](./images/1_2_2.webp)
 
-    ![Quota Settings](../images/1_2_8.webp)
+4. **Save API Key**
 
-### 2.2 Python Environment Configuration
+A new API key will be generated for you. Please **copy now** and save it in a safe place.
 
-After entering the IDE, first select the terminal below.
+> Note: For security reasons, this key will only be displayed in full once, and you will no longer be able to see it after closing the pop-up window.
 
-![Enter Terminal](../images/1_2_9.webp)
+    ![Copy and save the key](./images/1_2_3.webp)
 
-1.  **Update System Packages**
+## 2. GitHub Codespaces environment configuration (recommended)
 
-    Enter the following command in the terminal:
+> First make sure you have a network environment that can smoothly access GitHub. If you cannot access it smoothly, please use the following Cloud Studio
+
+GitHub Codespaces is a service provided by GitHub that allows developers to create, edit, and run code in the cloud. It provides a preconfigured development environment, including a code editor, terminal, debugging tools, etc., that can be used directly in the browser.
+
+### 2.1 Create Codespaces
+
+1. **Visit project address**
+
+Open your browser and visit [all-in-rag](https://github.com/datawhalechina/all-in-rag)
+
+2. **Create a new branch**
+In the upper right corner of the project page, click the `Fork` button to create a new branch. It will take a moment to create successfully.
+
+    ![Create new branch 1](./images/1_2_4.webp)
+
+    ![Create new branch 2](./images/1_2_5.webp)
+
+3. **Create Codespaces**
+In the upper right corner of the project page, click the `Code` button and select the `Codespaces` tab. Click the `New codespace` button and wait for the new Codespaces environment to be created successfully.
+
+    ![CreateCodespaces](./images/1_2_6.webp)
+
+4. **Enter Codespaces again**
+After the web page is closed, find the newly created repository and click the red box to select the content to re-enter the codespace environment.
+
+    ![Enter Codespaces again](./images/1_2_7.webp)
+
+5. **Quota setting**
+Find the codespace settings in GitHub's account settings. It is recommended to adjust the suspension time according to your own situation (too long a time will waste the quota, and the free account provides a single-core quota of 120 hours)
+
+    ![Quota setting](./images/1_2_8.webp)
+
+### 2.2 python environment configuration
+
+After entering the IDE, select the terminal below
+
+![Enter terminal](./images/1_2_9.webp)
+
+1. **Update system software packages**
+
+Enter the following command in the terminal:
 
     ```bash
     sudo apt update
     sudo apt upgrade -y
     ```
 
-2.  **Install Miniconda**
+2. **Install Miniconda**
 
     ```bash
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
     bash ~/miniconda.sh
     ```
 
-    - Press Enter to read the license agreement
-    - Enter `yes` to agree to the agreement
-    - Press Enter directly when prompted for installation path (use default path /home/ubuntu/miniconda3)
-    - Whether to initialize Miniconda: Enter `yes` to add Miniconda to your PATH environment variable.
+- Press Enter to read the license agreement
+- Enter `yes` to agree to the agreement
+- Press Enter directly when prompted for the installation path (use the default path /home/ubuntu/miniconda3)
+- Whether to initialize Miniconda: enter `yes` to add Miniconda to your PATH environment variable.
 
     ```bash
     source ~/.bashrc
     conda --version
     ```
 
-    If the version number is displayed, the installation is successful.
+If the version number is displayed, the installation is successful.
 
-### 2.3 API Configuration
+### 2.3 API configuration
 
-1.  Use the `vim` editor to open your shell configuration file.
+1. Open your shell configuration file using the `vim` editor.
 
     ```bash
     vim ~/.bashrc
     ```
 
-2.  Enter `i` to enter edit mode, add the following line at the end of the file, replacing `[Your Deepseek API Key]` with your own key:
+2. Enter `i` to enter edit mode and add the following line at the end of the file, replacing `[你的大模型 API 密钥]` with your own key:
 
     ```bash
-    export DEEPSEEK_API_KEY=[Your Deepseek API Key]
+    export DEEPSEEK_API_KEY=[你的大模型 API 密钥]
     ```
 
-3.  Save and exit. In vim, press Esc to enter command mode, then type `:wq` and press Enter to save the file and exit.
+If you choose the `AIHubmix` platform, you can also use it to increase recognition:
 
-4.  Make configuration effective. Execute the following command to immediately load the updated configuration and make the environment variable effective:
+    ```bash
+    export AIHUBMIX_API_KEY=[你的大模型 API 密钥]
+    ```
+
+> Do not bring `[]`
+
+3. Save and exit In vim, press Esc to enter command mode, then enter `:wq` and press Enter to save the file and exit.
+
+4. Make the configuration take effect. Execute the following command to immediately load the updated configuration and make the environment variables take effect:
 
     ```bash
     source ~/.bashrc
     ```
 
-### 2.4 Create and Activate Virtual Environment
+### 2.4 Create and activate virtual environment
 
-1.  **Create Virtual Environment**
+1. **Create a virtual environment**
 
     ```bash
     conda create --name all-in-rag python=3.12.7
     ```
 
-    Press Enter directly when options appear.
+Just press Enter when the option appears.
 
-2.  **Activate Virtual Environment**
+2. **Activate virtual environment**
 
-    Use the following command to activate the virtual environment:
+Activate the virtual environment using the following command:
 
     ```bash
     conda activate all-in-rag
     ```
 
-3.  **Dependency Installation**
-    If you strictly follow the above process, you should currently be in the project root directory. Enter the code directory to install dependency libraries.
+3. **Depends on installation**
+If you strictly install the above process, you should currently go to the project root directory and enter the code directory to install the dependent libraries.
 
     ```bash
     cd code
     pip install -r requirements.txt
     ```
 
-    > If there are version errors about grpcio, you can ignore them.
+> If there is a version error about grpcio, don’t worry.
 
-## 3. Cloud Studio Environment Configuration (Recommended for Domestic Environment)
+## 3. Cloud Studio environment configuration (recommended for domestic environments)
 
-Cloud Studio is a browser-based integrated development environment (IDE) launched by Tencent Cloud. It supports access to both CPU and GPU.
+Cloud Studio is a browser-based integrated development environment (IDE) launched by Tencent Cloud. Supports access to CPU and GPU.
 
-> I heard there's a free quota of 50 hours per month 🤔
+> I heard that there is a free quota of 50 hours a month🤔
 
-### 3.1 Application Creation
+### 3.1 Application creation
 
-1.  **Visit Cloud Studio**
-    Open your browser and visit [Cloud Studio](https://cloudstudio.net/).
+1. **Access Cloud Studio**
+Open the browser and visit [Cloud Studio](https://cloudstudio.net/).
 
-2.  **Login or Register Account**
-    Click the `Register/Login` button in the upper right corner of the page and complete login using WeChat or other methods.
+2. **Log in or register an account**
+Click the `注册登录` button in the upper right corner of the page and complete the login using WeChat or other methods.
 
-3.  **Create Application**
-    Find and click `Create Application` in the navigation bar at the top of the page. Select `Import from Git Repository`, enter `https://github.com/datawhalechina/all-in-rag.git` in the project address bar and press Enter. It will automatically create a title and description for you.
+3. **Create Application**
+Find and click `创建应用` in the navigation bar at the top of the page. Select `从 Git 仓库导入`, enter `https://github.com/datawhalechina/all-in-rag.git` in the project address bar and press Enter, the title and description will be automatically created for you.
 
-    ![Create Application](../images/1_2_10.webp)
+    ![Create app](./images/1_2_10.webp)
 
-4.  **Re-enter**
-    Later, find the previously created application on the [Application Management Page](https://cloudstudio.net/my-app), click on it and select "Write Code" in the upper right corner to re-enter.
+> Be careful not to include the URL in the description
 
-    ![Re-enter Application](../images/1_2_11.webp)
+4. **Enter again**
+Later, find the previously created application on the [Application Management Page] (https://cloudstudio.net/my-app), click it and select the upper right corner to write code to enter again.
 
-### 3.2 Python Environment Configuration
+    ![Enter the application again](./images/1_2_11.webp)
 
-After entering the IDE, first select the terminal on the right.
+### 3.2 python environment configuration
 
-![Enter Terminal](../images/1_2_12.webp)
+After entering the IDE, select the terminal on the right
 
-1.  **Update System Packages**
+![Enter terminal](./images/1_2_12.webp)
 
-    Enter the following command in the terminal:
+1. **Update system software packages**
+
+Enter the following command in the terminal:
 
     ```bash
     sudo apt update
     sudo apt upgrade -y
     ```
 
-2.  **Switch to Regular User**
+2. **Switch to normal user**
 
     ```bash
     su ubuntu
     ```
 
-3.  **Install Miniconda**
+3. **Install Miniconda**
 
     ```bash
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
     bash ~/miniconda.sh
     ```
 
-    - Press Enter to read the license agreement
-    - Enter `yes` to agree to the agreement
-    - Press Enter directly when prompted for installation path (use default path /home/ubuntu/miniconda3)
-    - Whether to initialize Miniconda: Enter `yes` to add Miniconda to your PATH environment variable.
+- Press Enter to read the license agreement
+- Enter `yes` to agree to the agreement
+- Press Enter directly when prompted for the installation path (use the default path /home/ubuntu/miniconda3)
+- Whether to initialize Miniconda: enter `yes` to add Miniconda to your PATH environment variable.
 
     ```bash
     source ~/.bashrc
     conda --version
     ```
 
-    If the version number is displayed, the installation is successful.
+If the version number is displayed, the installation is successful.
 
-### 3.3 API Configuration
+### 3.3 API configuration
 
-1.  Use the `vim` editor to open your shell configuration file.
+1. Open your shell configuration file using the `vim` editor.
 
     ```bash
     vim ~/.bashrc
     ```
 
-2.  Enter `i` to enter edit mode, add the following line at the end of the file, replacing `[Your Deepseek API Key]` with your own key:
+2. Enter `i` to enter edit mode and add the following line at the end of the file, replacing `[你的大模型 API 密钥]` with your own key:
 
     ```bash
-    export DEEPSEEK_API_KEY=[Your Deepseek API Key]
+    export DEEPSEEK_API_KEY=[你的大模型 API 密钥]
     ```
 
-3.  Save and exit. In vim, press Esc to enter command mode, then type `:wq` and press Enter to save the file and exit.
+If you choose the `AIHubmix` platform, you can also use it to increase recognition:
 
-4.  Make configuration effective. Execute the following command to immediately load the updated configuration and make the environment variable effective:
+    ```bash
+    export AIHUBMIX_API_KEY=[你的大模型 API 密钥]
+    ```
+
+> Do not bring `[]`
+
+3. Save and exit In vim, press Esc to enter command mode, then enter `:wq` and press Enter to save the file and exit.
+
+4. Make the configuration take effect. Execute the following command to immediately load the updated configuration and make the environment variables take effect:
 
     ```bash
     source ~/.bashrc
     ```
 
-### 3.4 Create and Activate Virtual Environment
+### 3.4 Create and activate virtual environment
 
-1.  **Create Virtual Environment**
+1. **Create a virtual environment**
 
     ```bash
     conda create --name all-in-rag python=3.12.7
     ```
 
-    Press Enter directly when options appear.
+Just press Enter when the option appears.
 
-2.  **Configure File Permissions**
+2. **Configuration file permissions**
 
     ```bash
     sudo chown -R ubuntu:ubuntu code models
     ```
 
-3.  **Activate Virtual Environment**
+3. **Activate virtual environment**
 
-    Use the following command to activate the virtual environment:
+Activate the virtual environment using the following command:
 
     ```bash
     conda activate all-in-rag
     ```
 
-4.  **Dependency Installation**
-    If you strictly follow the above process, you should currently be in the project root directory. Enter the code directory to install dependency libraries.
+4. **Depends on installation**
+If you strictly install the above process, you should currently go to the project root directory and enter the code directory to install the dependent libraries.
 
     ```bash
     cd code
     pip install -r requirements.txt
     ```
 
-    > If there are version errors about grpcio, you can ignore them.
+> If there is a version error about grpcio, don’t worry.
 
-## 4. Windows Environment Configuration (Skip this step if using Cloud Studio or Codespaces)
+## 4. Windows environment configuration (you can skip this step if you use Cloud Studio or Codespaces)
 
-### 4.1 API Configuration
+### 4.1 API configuration
 
-1.  Right-click "Computer" or "This PC", then click "Properties".
+1. Right-click Computer or This PC, and then click Properties.
 
-2.  In the left menu, click "Advanced system settings".
+2. In the left menu, click "Advanced system settings."
 
-3.  In the "System Properties" dialog box, click the "Advanced" tab, then click the "Environment Variables" button below.
+3. In the "System Properties" dialog box, click the "Advanced" tab, and then click the "Environment Variables" button below.
 
-    ![Advanced System Settings](../images/1_2_13.webp)
+    ![Advanced system settings](./images/1_2_13.webp)
 
-4.  In the "Environment Variables" dialog box, click "New" (under the "User variables" section), then enter the following information:
-    - Variable name: DEEPSEEK_API_KEY
-    - Variable value: [Your Deepseek API Key]
+4. In the Environment Variables dialog box, click New (under the User Variables section) and enter the following information:
+- Variable name: DEEPSEEK_API_KEY
+- Variable value: [your Deepseek API key]
 
-    ![Advanced System Settings](../images/1_2_14.webp)
+    ![Advanced system settings](./images/1_2_14.webp)
 
 ### 4.2 Install Miniconda
 
-1.  **Download Installer**
+1. **Download the installer**
 
-    It's recommended to visit [Tsinghua University Open Source Software Mirror](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/) for faster download speeds. Choose the latest `Windows-x86_64.exe` version according to your system.
+It is first recommended to visit [Tsinghua University Open Source Software Mirror Station] (https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/) to obtain faster download speeds. Select the latest `.exe` version to download according to your system.
 
-    ![Select Miniconda Version](images/ch1/miniconda-select-version.png)
+    ![Select Miniconda version](images/1_2_15.webp)
 
-    You can also download from the [Miniconda Official Website](https://docs.conda.io/en/latest/miniconda.html).
+You can also download from [Miniconda official website](https://docs.conda.io/en/latest/miniconda.html).
 
-2.  **Run Installation Wizard**
+2. **Run the installation wizard**
 
-    After downloading, double-click the `.exe` file to start installation. Follow the wizard prompts:
+Once the download is complete, double-click the `.exe` file to start the installation. Follow the wizard prompts:
 
-    *   **Welcome**: Click `Next`.
-        ![Welcome](../images/)
-    *   **License Agreement**: Click `I Agree`.
-        ![License Agreement](../images/)
-    *   **Installation Type**: Select `Just Me`, click `Next`.
-        ![Installation Type](../images/)
-    *   **Choose Install Location**: It's recommended to keep the default path, or choose a path without Chinese characters and spaces. Click `Next`.
-        ![Install Location](../images/)
-    *   **Advanced Installation Options**: **Do not check** "Add Miniconda3 to my PATH environment variable". We will manually configure environment variables later. Click `Install`.
-        ![Advanced Options](../images/)
-    *   **Installation Complete**: After installation is complete, click `Next`, then uncheck "Learn more" and click `Finish` to complete installation.
-        ![Installation Complete](../images/)
+* **Welcome**: Click on `Next`.
 
-3.  **Manually Configure Environment Variables**
+        ![Welcome](./images/1_2_16.webp)
 
-    To use the `conda` command in any terminal window, you need to manually configure environment variables.
+* **License Agreement**: Click on `I Agree`.
 
-    *   Search for "Edit the system environment variables" in the Windows search bar and open it.
-        ![Edit System Environment Variables](../images/)
-    *   In the "System Properties" window, click "Environment Variables".
-        ![Environment Variables Button](../images/)
-    *   In the "Environment Variables" window, find the `Path` variable under "System variables", select it and click "Edit".
-        ![Edit Path Variable](../images/)
-    *   In the "Edit Environment Variable" window, create three new paths pointing to the corresponding folders under your Miniconda installation directory. If your installation path is `D:\Miniconda3`, you need to add:
+        ![License Agreement](./images/1_2_17.webp)
+
+* **Installation Type**: Select `Just Me`, click `Next`.
+
+        ![Installation Type](./images/1_2_18.webp)
+
+* **Choose Install Location**: It is recommended to keep the default path, or choose a path that does not contain Chinese characters and spaces. Click on `Next`.
+
+        ![Install Location](./images/1_2_19.webp)
+
+* **Advanced Installation Options**: **Please do not check** "Add Miniconda3 to my PATH environment variable". We will manually configure the environment variables later. Click on `Install`.
+
+        ![Advanced Options](./images/1_2_20.webp)
+
+* **Installation Complete**: After the installation is complete, click `Next`, then uncheck "Learn more" and click `Finish` to complete the installation.
+
+3. **Manually configure environment variables**
+
+In order to use the `conda` command in any terminal window, you need to manually configure the environment variables.
+
+* Search for "Edit system environment variables" in the Windows search bar and open it.
+
+        ![Edit system environment variables](./images/1_2_21.webp)
+
+* In the "System Properties" window, click "Environment Variables".
+
+        ![Environment variables button](./images/1_2_22.webp)
+
+* In the "Environment Variables" window, find the `Path` variable under "System Variables", select it and click "Edit".
+
+        ![Edit Path variable](./images/1_2_23.webp)
+
+* In the "Edit Environment Variables" window, create three new paths and point them to the corresponding folders in your Miniconda installation directory. If your installation path is `D:\Miniconda3`, you need to add:
         ```
         D:\Miniconda3
         D:\Miniconda3\Scripts
         D:\Miniconda3\Library\bin
         ```
-        ![Add Paths](../images/)
-    *   After completion, click "OK" all the way to save changes.
+        ![add path](./images/1_2_24.webp)
+        
+* When finished, click OK all the way to save your changes.
 
-### 4.3 Configure Conda Mirror Sources
+### 4.3 Configure Conda mirror source
 
-To speed up subsequent package installations using `conda`, it's strongly recommended to configure domestic mirror sources. Open a new terminal or Anaconda Prompt and run the following commands:
+In order to speed up subsequent use of the `conda` installation package, it is strongly recommended to configure a domestic mirror source. Open a new terminal or Anaconda Prompt and run the following command:
 
 ```bash
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -340,80 +406,80 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/f
 conda config --set show_channel_urls yes
 ```
 
-After configuration, you can view the added sources using the `conda config --show channels` command.
+After the configuration is completed, you can view the added sources through the `conda config --show channels` command.
 
-## 5. Project Code Pulling (Skip this step if using Cloud Studio or Codespaces)
+## 5. Project code pull (you can skip this step if you use Cloud Studio or Codespaces)
 
 ### 5.1 Install Git
 
-If you haven't installed Git yet, please follow these steps to install it.
+If you don't have Git installed yet, follow these steps to install it.
 
-* **Windows System**: Visit the [Git Official Website](https://git-scm.com/download/win), download and run the installer, complete installation with default settings.
-* **macOS System**: Open terminal and enter the following command to install Git:
+* **Windows system**: Visit [Git official website](https://git-scm.com/download/win), download and run the installation program, and complete the installation according to the default settings.
+* **macOS system**: Open the terminal and enter the following command to install Git:
 
   ```bash
   brew install git
   ```
-* **Linux System (Ubuntu example)**: Open terminal and enter the following commands to install Git:
+* **Linux system (taking Ubuntu as an example)**: Open the terminal and enter the following command to install Git:
 
   ```bash
   sudo apt-get update
   sudo apt-get install git
   ```
 
-After installation, verify that Git is installed successfully by entering the following command:
+After the installation is complete, verify whether Git is installed successfully and enter the following command:
 
 ```bash
 git --version
 ```
 
-If successful, it will display Git's version number.
+If successful, the Git version number will be displayed.
 
-### 5.2 Clone Project Code
+### 5.2 Clone project code
 
-1. **Choose Directory for Project**
-   Open terminal (or Git Bash in Windows), navigate to the directory where you want to store the project:
+1. **Select the directory to store the project**
+Open a terminal (or Git Bash in Windows) and navigate to the directory where you want to put your project:
 
    ```bash
-   cd [path where you want to store the project]
+   cd [你希望存放项目的路径]
    ```
 
-2. **Clone Repository**
-   Use the following command to pull the `all-in-rag` repository:
+2. **Clone repository**
+Use the following command to pull the `all-in-rag` repository:
 
    ```bash
    git clone https://github.com/datawhalechina/all-in-rag.git
    ```
 
-   Wait for the download to complete. The project code will be stored in the `all-in-rag` folder in the current directory.
+Wait for the download to complete, and the project code will be stored in the `all-in-rag` folder in the current directory.
 
-3. **Enter Project Directory**
-   After pulling the code, enter the project directory:
+3. **Enter the project directory**
+After pulling the code, enter the project directory:
 
    ```bash
    cd all-in-rag
    ```
 
-### 5.3 Create and Activate Virtual Environment
+### 5.3 Create and activate virtual environment
 
-In the project directory, it's recommended to use the previously configured Miniconda to create a Python virtual environment.
+In the project directory, it is recommended to use Miniconda configured previously to create a Python virtual environment.
 
-1. **Create Virtual Environment**
+1. **Create a virtual environment**
 
    ```bash
    conda create --name all-in-rag python=3.12.7
    ```
 
-2. **Activate Virtual Environment**
+2. **Activate virtual environment**
 
-   All systems use the following command to activate the virtual environment:
+All systems use the following command to activate the virtual environment:
 
    ```bash
    conda activate all-in-rag
    ```
 
-3.  **Dependency Installation**
-    If you strictly follow the above process, you should currently be in the project root directory. Enter the code directory to install dependency libraries.
+3. **Depends on installation**
+If you strictly install the above process, you should currently go to the project root directory and enter the code directory to install the dependent libraries.
 
     ```bash
     cd code

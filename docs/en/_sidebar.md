@@ -3,7 +3,7 @@
         - [Section 1: RAG Introduction](en/chapter1/01_RAG_intro.md)
         - [Section 2: Preparation](en/chapter1/02_preparation.md)
         - [Section 3: Four Steps to Build RAG](en/chapter1/03_get_start_rag.md)
-        - [Appendix: Python Virtual Environment Deployment](en/chapter1/04_virtualenv.md)
+        - [Appendix: Python Virtual Environment Deployment](en/chapter1/virtualenv.md)
     - Chapter 2: Data Preparation
         - [Section 1: Data Loading](en/chapter2/04_data_load.md)
         - [Section 2: Text Chunking](en/chapter2/05_text_chunking.md)

@@ -55,18 +55,18 @@ Starting from practice and combining the latest RAG technology development trend
 
 ### Part I: RAG Fundamentals
 
-**Chapter 1 Unlocking RAG** [📖 View Chapter](en/chapter1)
+**Chapter 1 Unlocking RAG** [View Chapter](en/chapter1)
 1. [x] [RAG Introduction](en/chapter1/01_RAG_intro.md) - RAG technology overview and application scenarios
 2. [x] [Preparation](en/chapter1/02_preparation.md) - Environment configuration and tool preparation
 3. [x] [Four Steps to Build RAG](en/chapter1/03_get_start_rag.md) - Quick start with RAG development
 
-**Chapter 2 Data Preparation** [📖 View Chapter](en/chapter2)
+**Chapter 2 Data Preparation** [View Chapter](en/chapter2)
 1. [x] [Data Loading](en/chapter2/04_data_load.md) - Multi-format document processing and loading
 2. [x] [Text Chunking](en/chapter2/05_text_chunking.md) - Text segmentation strategies and optimization
 
 ### Part II: Index Construction and Optimization
 
-**Chapter 3 Index Construction** [📖 View Chapter](en/chapter3)
+**Chapter 3 Index Construction** [View Chapter](en/chapter3)
 1. [x] [Vector Embedding](en/chapter3/06_vector_embedding.md) - Detailed explanation of text vectorization technology
 2. [x] [Multimodal Embedding](en/chapter3/07_multimodal_embedding.md) - Image-text multimodal vectorization
 3. [x] [Vector Database](en/chapter3/08_vector_db.md) - Vector storage and retrieval systems
@@ -75,7 +75,7 @@ Starting from practice and combining the latest RAG technology development trend
 
 ### Part III: Advanced Retrieval Techniques
 
-**Chapter 4 Retrieval Optimization** [📖 View Chapter](en/chapter4)
+**Chapter 4 Retrieval Optimization** [View Chapter](en/chapter4)
 1. [x] [Hybrid Search](en/chapter4/11_hybrid_search.md) - Dense + sparse retrieval fusion
 2. [x] [Query Construction](en/chapter4/12_query_construction.md) - Intelligent query understanding and construction
 3. [x] [Text2SQL](en/chapter4/13_text2sql.md) - Natural language to SQL query
@@ -84,34 +84,34 @@ Starting from practice and combining the latest RAG technology development trend
 
 ### Part IV: Generation and Evaluation
 
-**Chapter 5 Generation Integration** [📖 View Chapter](en/chapter5)
+**Chapter 5 Generation Integration** [View Chapter](en/chapter5)
 1. [x] [Formatted Generation](en/chapter5/16_formatted_generation.md) - Structured output and format control
 
-**Chapter 6 RAG System Evaluation** [📖 View Chapter](en/chapter6)
+**Chapter 6 RAG System Evaluation** [View Chapter](en/chapter6)
 1. [x] [Evaluation Introduction](en/chapter6/18_system_evaluation.md) - RAG system evaluation methodology
 2. [x] [Evaluation Tools](en/chapter6/19_common_tools.md) - Common evaluation tools and metrics
 
 ### Part V: Advanced Applications and Practice
 
-**Chapter 7 Advanced RAG Architecture (Extended Elective)** [📖 View Chapter](en/chapter7)
+**Chapter 7 Advanced RAG Architecture (Extended Elective)** [View Chapter](en/chapter7)
 
 1. [x] [Knowledge Graph-based RAG](en/chapter7/20_kg_rag.md)
 
-**Chapter 8 Project Practice I (Basic)** [📖 View Chapter](en/chapter8)
+**Chapter 8 Project Practice I (Basic)** [View Chapter](en/chapter8)
 1. [x] [Environment Configuration and Project Architecture](en/chapter8/01_env_architecture.md)
 2. [x] [Data Preparation Module Implementation](en/chapter8/02_data_preparation.md)
 3. [x] [Index Construction and Retrieval Optimization](en/chapter8/03_index_retrieval.md)
 4. [x] [Generation Integration and System Integration](en/chapter8/04_generation_sys.md)
 
-**Chapter 9 Project Practice I Optimization (Elective)** [📖 View Chapter](en/chapter9)
+**Chapter 9 Project Practice I Optimization (Elective)** [View Chapter](en/chapter9)
 
-[🍽️ Project Demo](https://github.com/FutureUnreal/What-to-eat-today)
+[Project Demo](https://github.com/FutureUnreal/What-to-eat-today)
 1. [x] [Graph RAG Architecture Design](en/chapter9/01_graph_rag_architecture.md)
 2. [x] [Graph Data Modeling and Preparation](en/chapter9/02_graph_data_modeling.md)
 3. [x] [Milvus Index Construction](en/chapter9/03_index_construction.md)
 4. [x] [Intelligent Query Routing and Retrieval Strategy](en/chapter9/04_intelligent_query_routing.md)
 
-**Chapter 10 Project Practice II (Elective)** [📖 View Chapter](en/chapter10) *In Planning*
+**Chapter 10 Project Practice II (Elective)** *In Planning*
 
 ## Directory Structure
 
